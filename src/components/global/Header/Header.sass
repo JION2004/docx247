@@ -1,0 +1,43 @@
+.header-top-item
+    @apply body-16 
+.header-btn
+    li
+        @apply w-auto h-10  border rounded-2 flex justify-center items-center text-black border-gray-200 -md:hidden
+    li:first-child
+        @apply bg-primary-4 text-white -xl:hidden	
+    li:nth-child(2)
+        @apply bg-primary-3 text-white -xl:hidden
+    a 
+        @apply rem:p-[10px] font-bold -lg:rem:text-[12px] 
+    i
+        @apply font-light body-18 px-2 -lg:rem:text-[12px]
+    li:last-child
+        @apply block md:hidden mr-2 border-2
+        .header-hamberger
+            @apply  w-10 h-10 flex justify-center items-center 
+            i
+                @apply rem:text-[26px] font-medium
+
+.header-bottom
+    li
+        @apply border border-gray-200 flex-1 flex justify-center rounded-2
+        position: relative
+        cursor: pointer
+    h2
+        @apply font-bold body-18 py-3 -xl:rem:text-[12px]
+
+    li
+        &:hover
+            @apply border-primary-1 bg-primary-1/10
+
+    li.active
+        @apply border-primary-1 bg-primary-1/20
+.menu-item
+    ul
+        @apply flex flex-col gap-3
+    li
+        @apply h-auto  flex items-center rem:w-[320px] -lg:w-auto
+        &:hover
+            @apply bg-primary-1/20  w-auto 
+    a 
+        @apply body-16 font-bold text-white px-6 py-3

@@ -1,0 +1,81 @@
+header 
+	nav(class="border-b -sm:border-none")
+		.container
+			.header-top(class="flex gap-[184px] -xl:gap-10   ")
+				.header-top-item(class="flex flex-1 gap-15 py-2 items-center -md:gap-6 -sm:gap-3")
+					.header-logo(class="h-13 w-auto   ")
+						img(src="./img/logo.png")(class="w-auto h-atuo")
+					.header-search(class="flex-1  h-10 relative border-gray-200  border px-4 py-2 rounded-2")
+						input(placeholder="Tìm tài liệu...")(class="w-auto h-full outline-none relative")
+						button(class=" absolute top-1/2 -translate-y-1/2 right-[10px]")
+							<i class="fa-light fa-magnifying-glass rem:text-[20px]"></i>
+				.header-top-item(class="flex justify-center  items-center ")
+						ul(id="header-actions" class="flex gap-3 header-btn ")
+							li
+								a(href="") <i class="fa-light fa-money-simple-from-bracket"></i> Nạp tiền
+								
+							li
+								a(href="") <i class="fa-light fa-upload"></i> Tải lên
+								
+							li
+								a(href="") <i class="fa-light fa-user"></i> Đăng ký
+								
+							li
+								a(href="") <i class="fa-light fa-right-to-bracket"></i> Đăng nhập
+							li
+								.header-hamberger
+									.hamberger
+										<i class="fa-light fa-bars"></i>
+								
+	.container(class="-sm:hidden")
+		.header-bottom(id="header-nav" class="text-black ")
+						- var navItems = ["Kỹ thuật - Công nghệ", "Kinh tế - Quản trị", "Khoa học - Xã hội", "Y - Dược", "Nghệ thuật - Mỹ thuật", "Khoa học - Giáo dục"]
+						ul(id="header-nav-list" class="flex gap-6 items-center py-5 -lg:gap-3 -lg:grid grid-cols-3")
+							each item in navItems
+								li(onclick="document.querySelectorAll('#header-nav-list li').forEach(el => el.classList.remove('active')); this.classList.add('active')")
+									h2= item
+.dropmenu(class="bg-primary-3 py-15 h-auto w-full relative")
+	.container
+		.menu(class=" flex justify-between items-center") 
+			.menu-item
+				ul
+					li
+						a(href="") Kiến thức nền tảng
+					li
+						a(href="") Khoa học tự nhiên ứng dụng
+					li
+						a(href="") Kỹ thuật đại đương
+					li
+						a(href="") Công nghệ thông tin
+			.menu-item
+				ul
+					li
+						a(href="") Điện- Điện tử
+					li
+						a(href="") Viễn thông - Tự động hóa
+					li
+						a(href="") Cơ khí - Chế tạo
+					li
+						a(href="") Công nghệ vật liệu
+			.menu-item
+				ul
+					li
+						a(href="") Công nghệ - Năng lượng
+					li
+						a(href="") Công nghệ môi trường
+					li
+						a(href="") Công nghệ hiện đại - AI - IoT - Data
+					li
+						a(href="") Xu hướng công nghệ tương lai
+			.menu-item
+				ul
+					li
+						a(href="") Giáo trình - Tài liệu tổng hợp
+					li
+						a(href="") Đề cương - Ôn tập - Đề thi
+					li
+						a(href="") Đáp án - Trắc nghiệm
+					li
+						a(href="") Nghiên cứu - Tài liệu tham khảo
+	.close(class= "absolute top-1 right-2 ")
+		<i class="fa-light fa-x text-28 font-bold text-white"></i>
